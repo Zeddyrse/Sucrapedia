@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map} from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +20,18 @@ export class MapService {
 
     const fonction_de_traitement_de_la_route = (data:any):any =>{
       console.log(data);
-      return data;
+
+      const result:any[]=[];
+      let actuel:any = {};
+
+      for(let i = 1; i<data.features.length;i++){
+        actuel.ville = data.features[i].properties.city;
+        actuel.departement = data.features[i].properties.context;
+        actuel.adresse = data.features[i].properties.label;
+
+        result.push(actuel);
+      }
+      return result;
     };
 
     return prommesse_de_trouver_la_route.pipe(map(fonction_de_traitement_de_la_route));
