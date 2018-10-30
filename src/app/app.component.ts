@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Sucrapedia';
 
   public nom_de_bonbon:any;
+  
 
   constructor(param_service:BonbonsService){
     this.nom_de_bonbon = null;
@@ -21,4 +22,6 @@ export class AppComponent {
       }
     )
   }
+
 }
+
