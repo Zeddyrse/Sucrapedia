@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="card-columns">
+       <div *ngFor="let current of nom_de_bonbon">
+          <div class="card">
+             <p class="card-img-top text-center"><img class="img-fluid" src={{current.img}}/></p>
+             <p class="card-text"> {{current.name}}</p>
+             <p class="card-text"> {{current.type}}</p>
+ 
+             <ul>
+                <li>{{current.energy}}</li>
+                <li>{{current.sugar}}</li>
+                <li>{{current.salt}}</li>
+                <li>{{current.fat}}</li>
+                <li>{{current.proteins}}</li>
+                <li>{{current.fiber}}</li>
+             </ul>
+          </div>
+       </div>
+    </div>
+ </div>
+ 
