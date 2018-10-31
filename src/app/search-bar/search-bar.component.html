@@ -1,23 +1,38 @@
-<div class="container">
-<div class="row justify-content-center">
-                      <div class="col-12 col-md-10 col-lg-8">
-                          <form class="card card-sm">
-                              <div class="card-body row no-gutters align-items-center">
-                                  <div class="col-auto">
-                                      <i class="fas fa-search h4 text-body"></i>
-                                  </div>
-                                  <!--end of col-->
-                                  <div class="col">
-                                      <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
-                                  </div>
-                                  <!--end of col-->
-                                  <div class="col-auto">
-                                      <button class="btn btn-lg btn-light" type="submit">Search</button>
-                                  </div>
-                                  <!--end of col-->
-                              </div>
-                          </form>
-                      </div>
-                      <!--end of col-->
-                  </div>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="search-bar.component.css" />
+        <title>Sucrapedia</title>
+    </head>
+<body>
+<section class="filter-wrapper">
+ <div class="keyword-wrapper">
+<input type="text" id="keyword" placeholder="Je cherche un bonbon..." autofocus/>
+  </div>
+<ul class="filter-select">
+  <li class="filter-select-list"><img src="" alt="" width="50" height="50"><p class="artist-name"></p>
+<span class="tags"></span>
+</ul>
+</section>
+
+<!--Carousel Wrapper-->
+<mdb-carousel [isControls]="true" [animation]="'slide'">
+    <!--First slide-->
+    <mdb-carousel-item>
+        <img class="d-block w-100" src="Searchs_000.jpg" alt="First slide">
+    </mdb-carousel-item>
+    <!--/First slide-->
+    <!--Second slide-->
+    <mdb-carousel-item>
+        <img class="d-block w-100" src="Searchs_001.jpg" alt="Second slide">
+    </mdb-carousel-item>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <mdb-carousel-item>
+        <img class="d-block w-100" src="Searchs_003.jpg" alt="Third slide">
+    </mdb-carousel-item>
+    <!--/Third slide-->
+</mdb-carousel>
+<!--/.Carousel Wrapper-->
+</body>
