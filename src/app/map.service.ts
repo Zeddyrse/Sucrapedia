@@ -11,7 +11,7 @@ export class MapService {
 
   private maproad:HttpClient;
 
-  constructor(param_maproad:HttpClient) { 
+  constructor(param_maproad:HttpClient) {
     this.maproad = param_maproad;
   }
 
@@ -24,13 +24,15 @@ export class MapService {
       const result:any[]=[];
       let actuel:any = {};
 
-      for(let i = 1; i<data.features.length;i++){
+      for(let i = 0; i < data.features.length ; i++){
+         actuel = {};
         actuel.ville = data.features[i].properties.city;
         actuel.departement = data.features[i].properties.context;
         actuel.adresse = data.features[i].properties.label;
 
         result.push(actuel);
       }
+      console.log("liste adresse", result);
       return result;
     };
 

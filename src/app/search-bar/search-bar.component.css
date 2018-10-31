@@ -1,9 +1,15 @@
-.form-control-borderless {
-    border: none;
+.card {
+   margin-top: 5%;
+   margin-bottom: 5%;
+   background-color: rgba(0,0,0,0);
+   border: none;
 }
 
-.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
+input {
+   border-radius: 3em;
+}
+
+button {
+   border-radius: 3em;
+   margin-left: 2em;
 }

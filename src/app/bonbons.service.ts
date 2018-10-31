@@ -20,7 +20,7 @@ export class BonbonsService {
   }
 
   public getAvoirBonbon():Observable<any>{
-    const promesse_de_trouver_des_bonbons:Observable<any> = this.bonbonRechercher.get("https://fr.openfoodfacts.org/cgi/search.pl?search_terms=" + this.search + "&tagtype_0=categories&tag_contains_0=contains&tag_0=Bonbons&search_simple=1&json=1&page=1")
+    const promesse_de_trouver_des_bonbons:Observable<any> = this.bonbonRechercher.get("https://fr.openfoodfacts.org/cgi/search.pl?search_terms=" + this.search + "&tagtype_0=categories&tag_contains_0=contains&tag_0=Bonbons&search_simple=1&json=1&page_size250")
 
     const fonction_donnees_de_bonbons_issues_du_serveur = (data:any):any[] => {
 
@@ -58,7 +58,7 @@ export class BonbonsService {
 
          result.push(current);
       }
-      
+      console.log(result);
       return result;
 
     };

@@ -9,7 +9,9 @@ import { Component  } from '@angular/core';
 export class CompositeComponent {
 
   public villes_et_villages:any;
-  
+  public buttonState:string = "primary";
+
+  public ButtonText:string = "GOTTCHA !"
 
   constructor(param_service_villes:MapService){
     this.villes_et_villages = null;
@@ -21,4 +23,12 @@ export class CompositeComponent {
       }
     )
   }
-}  
+
+  public switching():void {
+     if (this.buttonState == "primary") this.buttonState = "warning";
+     else this.buttonState = "primary";
+
+     if (this.ButtonText == "GOTTCHA !") this.ButtonText = this.villes_et_villages[9].adresse;
+     else this.ButtonText = "GOTTCHA !";
+ }
+}
