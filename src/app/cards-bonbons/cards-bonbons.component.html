@@ -5,16 +5,17 @@
       <div *ngFor="let current of nom_de_bonbon">
          <div class="card">
             <p class="card-img-top text-center"><img class="img-fluid" src={{current.img}}/></p>
-            <p class="card-text"> {{current.name}}</p>
-            <p class="card-text"> {{current.type}}</p>
+            <p class="card-text text-center">Nom : {{current.name}}</p>
+            <p class="card-text text-center">Type : {{current.type}}</p>
 
-            <ul>
-               <li>{{current.energy}}</li>
-               <li>{{current.sugar}}</li>
-               <li>{{current.salt}}</li>
-               <li>{{current.fat}}</li>
-               <li>{{current.proteins}}</li>
-               <li>{{current.fiber}}</li>
+            <h2 class="text-center">Stats</h2>
+            <ul class="text-center">
+               <li>Energie :{{current.energy}}</li>
+               <li>Sucre : {{current.sugar}}</li>
+               <li>Sel : {{current.salt}}</li>
+               <li>Gras : {{current.fat}}</li>
+               <li>Protéine : {{current.proteins}}</li>
+               <li>Fibre : {{current.fiber}}</li>
             </ul>
          </div>
       </div>
