@@ -26,7 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [BonbonsService],
+  providers: [BonbonsService, SearchBarComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
